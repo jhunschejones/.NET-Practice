@@ -5,7 +5,7 @@ function getCount(data) {
   let name = 'to-do'
   if (data) {
     if (data > 1) {
-      name = "to-dos"
+      name = "to-do's"
     }
     el.text(data + ' ' + name)
   } else {
@@ -76,6 +76,7 @@ function editItem(id) {
     }
   })
   $('#spoiler').css({ 'display': 'block' })
+  $('#counter-line').css({ 'display': 'none' })
 }
 
 $('.my-form').on('submit', function() {
@@ -102,4 +103,5 @@ $('.my-form').on('submit', function() {
 
 function closeInput() {
   $('#spoiler').css({ 'display': 'none' })
+  $('#counter-line').css({ 'display': 'block' })
 }
