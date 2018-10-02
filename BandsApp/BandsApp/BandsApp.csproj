@@ -84,6 +84,9 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Primitives.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="NewRelic.Api.Agent, Version=8.6.45.0, Culture=neutral, PublicKeyToken=06552fced0b33d87, processorArchitecture=MSIL">
+      <HintPath>..\packages\NewRelic.Agent.Api.8.6.45\lib\net45\NewRelic.Api.Agent.dll</HintPath>
+    </Reference>
     <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
       <HintPath>..\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
     </Reference>
@@ -126,6 +129,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessData.cs" />
+    <Compile Include="AddData.cs" />
+    <Compile Include="DeleteData.cs" />
     <Compile Include="Migrations\20181002041828_InitialCreate.cs" />
     <Compile Include="Migrations\20181002041828_InitialCreate.designer.cs">
       <DependentUpon>20181002041828_InitialCreate.cs</DependentUpon>
