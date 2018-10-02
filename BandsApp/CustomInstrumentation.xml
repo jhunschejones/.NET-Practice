@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension xmlns="urn:newrelic-extension">
+  <instrumentation>
+    <tracerFactory name="NewRelic.Agent.Core.Tracer.Factories.BackgroundThreadTracerFactory" metricName="Category/AccessData">
+      <match assemblyName="BandsApp" className="BandsApp.AccessData">
+        <exactMethodMatcher methodName="Read" />
+      </match>
+    </tracerFactory>
+    <tracerFactory>
+      <match assemblyName="BandsApp" className="BandsApp.AccessData">
+        <exactMethodMatcher methodName="Read" />
+      </match>
+    </tracerFactory>
+  </instrumentation>
+</extension>
