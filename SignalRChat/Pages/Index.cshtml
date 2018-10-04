@@ -1,0 +1,25 @@
+﻿@page
+<div class="container">
+    <br/>
+    <h1>SignalR Chat</h1>
+    <br/>
+    <div class="row">
+        <div class="col">
+            <div id="user-name">User Name:&nbsp;<input type="text" id="userInput" size="48"/></div>
+            <div id="user-message">Message:&nbsp;<input type="text" id="messageInput" size="50"/></div>
+            <input type="button" id="sendButton" value="Send Message" class="btn btn-primary"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <hr/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <ul id="messageList" class="list-unstyled"></ul>
+        </div>
+    </div>
+</div>
+<script src="~/lib/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/chat.js"></script>
