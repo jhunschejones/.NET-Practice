@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>.NET To-Do List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <style>
+      input[type='submit'], button, [aria-label] {
+        cursor: pointer;
+      }
+      #spoiler {
+        display: none;
+      }
+      table {
+        /* font-family: Arial, sans-serif; */
+        border: 1px solid;
+        border-collapse: collapse;
+      }
+      th {
+        background-color: #0066CC;
+        color: white;
+      }
+      td {
+        border: 1px solid;
+        padding: 5px;
+      }
+      #edit-label {
+        margin-bottom: 3px;
+      }
+      .my-flex {
+        display: inline-flex;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>.NET To-Do List</h1>
+
+      <div id="spoiler">
+        <p id="edit-label" class="text-warning">Edit To-Do Item:</p>
+        <form class="my-form">
+          <input type="hidden" id="edit-id">
+          <input class="my-flex" type="checkbox" id="edit-isComplete">
+          <input type="text" id="edit-name" class="form-control" style="max-width:400px;height:32px;display:inline-flex;">
+          <input class="my-flex" type="submit" value="Save">
+          <a onclick="closeInput()" aria-label="Close" class="my-flex">&#10006;</a>
+        </form>
+        <br/>
+      </div>
+
+      <div id="counter-line">
+        <p class="text-secondary">Count: <span id="counter"></span></p>
+      </div>
+
+      <table width="500">
+        <tr>
+          <th style="text-align:center;" width="30">&#10004;</th>
+          <th style="text-align:center;min-width:150px;">Task</th>
+          <th width="30"></th>
+          <th width="30"></th>
+        </tr>
+        <tbody id="todos"></tbody>
+      </table>
+
+      <br />
+
+      <form action="javascript:void(0);" method="POST" onsubmit="addItem()">
+        <input type="text" id="add-name" placeholder="New to-do item" class="form-control my-flex" style="max-width:450px;height:32px;">
+        <input type="submit" value="Add" class="my-flex">
+      </form>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
