@@ -11,8 +11,8 @@ Run locally by hitting `F5` in VS Code
 ### Instructions for running the app with Dockerfile
 0. `dotnet publish --runtime debian-x64`
 1. `docker build . -t todoapi`
-2. `docker run -d -p 8080:80 --name todoapi todoapi`
-3. Go to `localhost:8080` to access the app in a web browser.
+2. `docker run -d -p 5005:5005 --name todoapi todoapi`
+3. Go to `localhost:5005` to access the app in a web browser. *(Also try `/api/weather` for info on some additional fun endpoints!)*
 
 ### Other Commands:
 * To list the process ID: `docker ps`

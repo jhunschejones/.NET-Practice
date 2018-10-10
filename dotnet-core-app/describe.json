@@ -1,0 +1,71 @@
+{
+    "endpoint": "dotnet-app",
+    "url": "http://dotnet-app:5005",
+    "action": [
+        {
+            "route": "/describe",
+            "method": "GET",
+            "description": "Returns this schema. Other apps or interfaces can use this endpoint to retrieve the routes avaialble in this application",
+            "data": ""
+        },
+        {
+            "route": "/execute",
+            "method": "POST",
+            "description": "Executes a schema",
+            "data": ""
+        },
+        {
+            "route": "/",
+            "method": "GET",
+            "description": "Returns a single page UI for the to-do list",
+            "data": ""
+        },
+        {
+            "route": "/api",
+            "method": "GET",
+            "description": "Returns all to-do items",
+            "data": ""
+        },
+        {
+            "route": "/api",
+            "method": "POST",
+            "description": "Create a new to-do item",
+            "data": {
+                "Name": "Additional to-do item",
+                "IsComplete": false
+            }
+        },
+        {
+            "route": "/api/1",
+            "method": "GET",
+            "description": "Returns a single to-do item with ID 1",
+            "data": ""
+        },
+        {
+            "route": "/api/1",
+            "method": "PUT",
+            "description": "Update a single to-do item with ID 1",
+            "data": {
+                "IsComplete": true
+            }
+        },
+        {
+            "route": "/api/1",
+            "method": "DELETE",
+            "description": "Delete a single to-do item with ID 1",
+            "data": ""
+        },
+        {
+            "route": "api/weather/portland",
+            "method": "GET",
+            "description": "Call an external API to return basic weather JSON data about Portland",
+            "data": ""
+        },
+        {
+            "route": "api/weather/dublin",
+            "method": "GET",
+            "description": "Call an external API to return basic weather JSON data about Dublin",
+            "data": ""
+        }
+    ]
+}

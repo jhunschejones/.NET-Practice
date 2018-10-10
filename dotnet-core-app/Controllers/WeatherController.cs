@@ -20,8 +20,6 @@ namespace TodoApi.Controllers
     [ApiController]
     public class WeatherController : ControllerBase
     {
-        
-        
         [HttpGet]
         public ActionResult<string> Get()
         {
