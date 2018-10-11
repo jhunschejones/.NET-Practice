@@ -5,7 +5,7 @@
         {
             "route": "/describe",
             "method": "GET",
-            "description": "Returns this schema. Other apps or interfaces can use this endpoint to retrieve the routes avaialble in this application",
+            "description": "Returns this schema. Other apps or interfaces can use this endpoint to retrieve the routes available in this application",
             "data": ""
         },
         {
