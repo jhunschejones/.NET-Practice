@@ -1,6 +1,10 @@
-using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Web; 
 using System.Collections.Generic;
-using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using System.Net.Http;
+using Newtonsoft.Json;
 
 namespace TodoApi.Controllers
 {
@@ -8,6 +12,12 @@ namespace TodoApi.Controllers
     [ApiController]
     public class ExecuteController : ControllerBase
     {
+        [HttpPost]
+        public string Post([FromBody] string content)
+        {
+            return content;
+        }
+
         [HttpGet]
         public ActionResult<string> Get()
         {
